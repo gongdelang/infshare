@@ -1,0 +1,18 @@
+<view>
+    <view style='font-size:20px;margin:30px;0px;20px;0px'>
+        {{navigationBarTitleText}}
+    </view>
+    <view style='border-bottom:1px solid #dddee1;margin-left:20px'>
+        <i-input disabled='{{isModify}}' bind:change="getInputAccount" value="{{ account }}" title="账号"  placeholder="请输入账号"/>
+    </view>
+    <view  style='margin-left:20px;border-bottom:1px solid #dddee1'>
+        <i-input disabled='{{isModify}}' type='password' bind:change="getInputPassword" value="{{ password }}" title="密码" placeholder="请输入密码" />
+    </view>
+
+    <i-button wx:if="{{!isModify}}" bind:click="updataInfInfo"  type="info" shape="circle" disabled="{{!isBind}}" size="large">绑定</i-button>
+     <i-button wx:else bind:click="deleteInput"  type="warning" shape="circle"  size="large">修改</i-button>
+
+    <!-- 错误提示 -->
+    <i-message id="message" />
+</view> 
+

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "绑定手机号",
+  "usingComponents": {
+    "i-input": "../../components/iView/input/index",
+    "i-button": "../../components/iView/button/index",
+    "i-message": "../../components/iView/message/index"
+  }
+}

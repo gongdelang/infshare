@@ -1,0 +1,13 @@
+/* pages/mine-phone/index.wxss */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.i-button{
+    width: 500rpx;
+    font-size:20px;
+    margin-top:30px;
+}

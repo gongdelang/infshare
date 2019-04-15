@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "登陆",
+    "usingComponents": {
+        "i-button": "../../components/iView/button/index",
+        "i-message": "../../components/iView/message/index"
+    }
+}

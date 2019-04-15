@@ -1,0 +1,27 @@
+<view wx:if="{{canIUse}}">
+    <view wx:if="{{!telNumber}}"  class="container">
+        <view style='margin-top:100px'>
+            <i-icon type="prompt_fill" size="100" color="#FF9900" />
+        </view>
+        <label style='margin-top:40px'>您的账号未绑定手机</label>
+        <label style='margin-top:10px'>推荐授权并同意使用微信账号的手机号</label>
+        <i-button class="i-button" openType="getPhoneNumber" bind:getphonenumber="bindGetPhoneNumber" type="info" shape="circle">微信授权绑定</i-button>
+        <view bindtap="goBindPhone" style='font-size:13px;color:#80848F;margin-top:15px'>绑定其他手机号</view>
+    </view>
+
+    <view wx:else  class="container">
+        <view style='margin-top:30px'>
+            <i-icon type="mobilephone_fill" size="100" color="#5cadff" />
+        </view>
+        <view style='margin-top:20px'>您已绑定手机号</view>
+        <view style='margin-top:20px;width:200px;text-align:center;border-bottom:1px solid #e9eaec'>{{telNumber}}</view>
+        <i-button class="i-button" openType="getPhoneNumber" bind:getphonenumber="bindGetPhoneNumber" type="info" shape="circle">微信授权修改绑定</i-button>
+        <view bindtap="goBindPhone" style='font-size:13px;color:#80848F;margin-top:15px'>绑定其他手机号</view>
+    </view>
+
+    <!-- 错误提示 -->
+    <i-message id="message" />
+</view>
+<view wx:else>
+    <label>该微信版本不支持该小程序</label>
+</view>

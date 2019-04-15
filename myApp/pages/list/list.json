@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "资源",
+    "usingComponents": {
+        "wux-filterbar": "../../components/wux/filterbar/index"
+    }
+}

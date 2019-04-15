@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "个人中心",
+    "usingComponents": {
+        "wux-white-space": "../../components/wux/white-space/index",
+        "i-icon": "../../components/iView/icon/index",
+        "i-cell-group": "../../components/iView/cell-group/index",
+        "i-cell": "../../components/iView/cell/index"
+    }
+}

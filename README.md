@@ -1,2 +1,2 @@
-# infshare
+# infShare
 一个基于微信小程序的校园信息共享平台

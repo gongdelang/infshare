@@ -1,0 +1,7 @@
+/* pages/mine/mine.wxss */
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:flex-end;
+}

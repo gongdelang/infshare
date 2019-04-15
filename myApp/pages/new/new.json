@@ -1,0 +1,15 @@
+{
+    "navigationBarTitleText": "资讯",
+    "onReachBottomDistance": 50,
+    "usingComponents": {
+        "wux-white-space": "../../components/wux/white-space/index",
+        "wux-divider": "../../components/wux/divider/index",
+        "wux-tabs": "../../components/wux/tabs/index",
+        "wux-tab": "../../components/wux/tab/index",
+        "i-icon": "../../components/iView/icon/index",
+        "i-card": "../../components/iView/card/index",
+        "i-spin": "../../components/iView/spin/index",
+        "i-tag": "../../components/iView/tag/index",
+        "i-action-sheet": "../../components/iView/action-sheet/index"
+    }
+}

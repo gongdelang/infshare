@@ -1,0 +1,14 @@
+<view wx:if="{{canIUse}}" class="container">
+    <view><image class="logo" src="/images/other/wx_log.png" mode="widthFix" /></view>
+    <view class="title">微信授权页面</view>
+    <view class="profile">授权并同意使用微信账号登录当前小程序</view>
+    <view style="width:500rpx;margin-top:120px">
+        <i-button openType="getUserInfo" bind:getuserinfo="bindGetUserInfo" type="success" shape="circle" size="large">授权登陆</i-button>
+    </view>
+
+    <!-- 错误提示 -->
+    <i-message id="message" />
+</view>
+<view wx:else>
+    <label>该微信版本不支持该小程序</label>
+</view>

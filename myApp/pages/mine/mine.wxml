@@ -1,0 +1,68 @@
+<view>
+    <!-- 头 -->
+    <view  id="header" >
+        <view class="container" style="height:250rpx;margin-left:50rpx"> 
+            <!-- 头像 -->
+            <view style='width: 160rpx;height: 160rpx;'>
+                <image src="{{ userInfo.avatarUrl }}" wx:if="{{userInfo && userInfo.avatarUrl}}" style='width: 160rpx;height: 160rpx;border-radius: 20%;' background-size="cover"></image>
+            </view>
+            <!-- 昵称&手机号码 -->
+            <view class="container" style='flex-direction:column;justify-content:space-around;align-items:flex-start;height:160rpx;margin-left:30rpx' >
+                <view style='font-size:40rpx'>{{userInfo.nickName}}</view>
+                <view bindtap="goInfo" class='container' style='justify-content:space-between;width:450rpx;' >
+                    <view wx:if="{{showTelNumber}}" style='font-size:35rpx;color:#1677D2'>已绑定{{showTelNumber}}</view>
+                    <view wx:else  style='font-size:35rpx;color:#FF9900'>未绑定手机号</view>
+                    <view><i-icon type="enter" color='grey'/></view>
+                </view>
+            </view>
+        </view>
+        <!-- 头下留白 -->
+        <wux-white-space size="large" bodyStyle="background:#FFFFFF" />
+    </view>
+
+    <!-- 留灰色（分割线） -->
+    <wux-white-space size="default" bodyStyle="background:#F5F5F5" />
+
+    <!-- list -->
+    <i-cell-group>
+        <i-cell title="收藏" is-link url="../mine-collect/index">
+            <i-icon slot="icon" type="collection" size='28' />
+        </i-cell>
+        <i-cell title="资源" is-link url="../mine-document/index">
+            <i-icon slot="icon"  type="document" size='28' />
+        </i-cell>
+    </i-cell-group>
+   
+    <!-- 留灰色（分割线） -->
+    <wux-white-space size="default" bodyStyle="background:#F5F5F5" />
+
+    <i-cell-group>
+        <i-cell wx:if="{{!infInfo.jiaoWuAccount}}" title="绑定教务处" is-link url="../mine-info/index?bindType=jiaoWu">
+            <i-icon  slot="icon" type="addressbook" size='28' />
+        </i-cell>
+        <i-cell wx:else title="已绑定教务处{{infInfo.jiaoWuAccount}}" is-link url="../mine-info/index?bindType=jiaoWu">
+            <i-icon  slot="icon" type="addressbook" size='28' />
+        </i-cell>
+
+        <i-cell  wx:if="{{!infInfo.libraryAccount}}" title="绑定图书馆" is-link url="../mine-info/index?bindType=library">
+            <i-icon  slot="icon"  type="createtask" size='28' />
+        </i-cell>
+        <i-cell  wx:else title="已绑定图书馆{{infInfo.libraryAccount}}" is-link url="../mine-info/index?bindType=library">
+            <i-icon  slot="icon"  type="createtask" size='28' />
+        </i-cell>
+
+    </i-cell-group>
+
+    <!-- 留灰色（分割线） -->
+    <wux-white-space size="default" bodyStyle="background:#F5F5F5" />
+
+    <i-cell-group>
+        <button open-type="contact">
+          <i-cell title="反馈" is-link>
+            <i-icon  slot="icon" type="feedback" size='28' />
+          </i-cell>
+        </button>
+    </i-cell-group>
+
+</view>
+

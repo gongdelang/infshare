@@ -1,0 +1,23 @@
+/**app.wxss**/
+
+page{
+    width: 100%;
+	color: #333;
+    background-color: #FFFFFF;
+    /*font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;*/
+    font-family: PingFang SC,Helvetica Neue,Hiragino Sans GB,Helvetica,Microsoft YaHei,Arial;
+    -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+button{
+    background-color: #fff;
+    text-align: left;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+
+}
+
+button::after{
+    border:none;
+}
